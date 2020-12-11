@@ -1,4 +1,4 @@
-[![General Assembly Logo](/ga_cog.png)](https://generalassemb.ly)
+
 
 # jQuery Lord of the Rings
 
