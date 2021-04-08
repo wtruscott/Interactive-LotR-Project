@@ -88,13 +88,25 @@ const makeHobbits = () => {
 
   // 1. create a 'ul'
 
+  const $ul = $("<ul>")
+
   // 2. make each hobbit an li element and append it to the 'ul' you just created
     // hint: use the given 'hobbits' array and use a for loop
 
+    for (hobbit of hobbits) {
+      const $li = $("<li>").text(hobbit)
+      $li.addClass("hobbit")
+      $ul.append($li) 
+    }
+
   // 3. also, give each hobbit (`li`) a class of "hobbit"
+
+ 
 
   // 4. append the ul to the shire
     // hint: get 'The-Shire' by using its id
+
+    $("#The-Shire").append($ul)
 
 };
 
@@ -108,10 +120,17 @@ const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
 
+  const $div = $("<div>")
+  $div.attr("id", "the-ring")
+
+
   // 2. add the ring as a child of Frodo
     // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
     // when you think you have given Frodo the ring, check in your Elements tab to see that it works correctly
+
+    const $hobbits = $(".hobbit")
+  $hobbits.eq(0).append($div)
 
 };
 
@@ -125,9 +144,19 @@ const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
 
+  const $bizarroul = $("<ul>")
+  
+  for (baddy of baddies) {
+    const $li = $("<li>").text(baddy)
+    $li.addClass("baddy")
+    $bizarroul.append($li) 
+  }
+
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append the ul to Mordor
+
+  $("#Mordor").append($bizarroul)
 
 };
 
