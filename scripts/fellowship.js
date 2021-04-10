@@ -347,10 +347,18 @@ const itsDangerousToGoAlone = () => {
 const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
+  const $motionCapture = $("<div>")
+  $motionCapture.attr("id", "gollum")
+  $("#Mordor").append($motionCapture)
+
 
   // 2. Move the ring from Frodo and give it to Gollum
 
+$("#the-ring").appendTo($motionCapture)
+
   // 3. Move Gollum into Mount Doom
+
+  $motionCapture.appendTo("#mount-doom")
 
 };
 
