@@ -324,7 +324,17 @@ const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
 
+  const $disneyLand = $("#Mordor")
+  const $halflings = $(".hobbit")
+  $halflings.eq(0).appendTo($disneyLand)
+  $halflings.eq(1).appendTo($disneyLand)
+
+  
   // 2. add a div with an id of 'mount-doom' to Mordor
+
+  const $splashMountain = $("<div>")
+  $splashMountain.attr("id", "mount-doom")
+  $disneyLand.append($splashMountain)
 
 };
 
