@@ -279,8 +279,8 @@ const forgeTheFellowShip = () => {
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' text to 'Gandalf the White'
-  $peterJacksonFive = $(".buddy")
-  $sirIan = $peterJacksonFive.eq(0)
+  const $peterJacksonFive = $(".buddy")
+  const $sirIan = $peterJacksonFive.eq(0)
   $sirIan.text("Gandalf the White")
 
   // 2. add a class "the-white" to this element
@@ -301,10 +301,16 @@ const theBalrog = () => {
 const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
-
+    alert("The Horn of Gondor has been blown!")
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
+const $peterJacksonFive = $(".buddy")
+$peterJacksonFive.eq(3).css("text-decoration","line-through")
+
 
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
+
+  const $scumAndVillany = $(".baddy")
+  $scumAndVillany.eq(2).detach()
 
 };
 
