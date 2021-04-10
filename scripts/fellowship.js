@@ -279,11 +279,17 @@ const forgeTheFellowShip = () => {
 const theBalrog = () => {
 
   // 1. change the 'Gandalf' text to 'Gandalf the White'
+  $peterJacksonFive = $(".buddy")
+  $sirIan = $peterJacksonFive.eq(0)
+  $sirIan.text("Gandalf the White")
 
   // 2. add a class "the-white" to this element
 
+  $sirIan.attr("class", "the-white")
+
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
+  // done, but I added a display of inline, and some padding to fix the look a little.
 };
 
 // COMMIT YOUR WORK
